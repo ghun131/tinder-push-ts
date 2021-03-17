@@ -1,0 +1,66 @@
+.ProfileAction__button {
+  border-radius: 0 !important;
+  width: 50%;
+}
+
+.Profile__text {
+  text-align: right;
+  margin-right: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.Profile__name {
+  margin-left: 16px;
+}
+
+.Profile__picture {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 473px;
+}
+
+.ProfileAction__container__top {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.ProfileAction__container__bottom {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.UserProfile__container {
+  position: absolute;
+  top: 48px;
+  width: 100%;
+}
+
+.ClickRecord__main {
+  position: absolute;
+  top: 48px;
+  width: 100%;
+  height: 522px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ClickRecord__container {
+  width: 469px;
+  height: 626px;
+  margin: 0 auto;
+  background-color: white;
+  position: relative;
+}
+
+.ClickRecord__like {
+  color: red;
+}
+
+.ClickRecord__dislike {
+  color: gray;
+}
