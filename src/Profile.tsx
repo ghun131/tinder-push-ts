@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Dispatch, SetStateAction } from "react";
 import IconButton from "@material-ui/core/IconButton";
 import Favorite from "@material-ui/icons/Favorite";
-import ArrowForward from "@material-ui/icons/ArrowForward";
+import Close from "@material-ui/icons/Close";
 import ThumbUp from "@material-ui/icons/ThumbUp";
 import ThumbDown from "@material-ui/icons/ThumbDown";
 import { BASE_URL, commonHeaders } from "./common";
@@ -87,7 +87,7 @@ function Profile({
           className="ProfileAction__button"
           onClick={handleDislike(id)}
         >
-          <ArrowForward />
+          <Close />
         </IconButton>
         <IconButton className="ProfileAction__button" onClick={handleLike(id)}>
           <Favorite />

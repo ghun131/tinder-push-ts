@@ -31,9 +31,9 @@ function App() {
   const handlers = useSwipeable({
     onSwipeStart: (data) => {
       if (data.dir === "Left") {
-        handleLike(selectedUser.id)();
-      } else {
         handleDislike(selectedUser.id)();
+      } else {
+        handleLike(selectedUser.id)();
       }
     },
     trackMouse: true,

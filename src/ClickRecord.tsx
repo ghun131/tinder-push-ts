@@ -2,7 +2,7 @@ import React from "react";
 import "./Profile.css";
 import IconButton from "@material-ui/core/IconButton";
 import Favorite from "@material-ui/icons/Favorite";
-import ArrowForward from "@material-ui/icons/ArrowForward";
+import Close from "@material-ui/icons/Close";
 import ThumbUp from "@material-ui/icons/ThumbUp";
 import ThumbDown from "@material-ui/icons/ThumbDown";
 import SlideLayer from "./SlideLayer";
@@ -60,7 +60,7 @@ function ClickRecord({
           className="ProfileAction__button"
           onClick={handleBackToProfile}
         >
-          <ArrowForward />
+          <Close />
         </IconButton>
         <IconButton
           className="ProfileAction__button"

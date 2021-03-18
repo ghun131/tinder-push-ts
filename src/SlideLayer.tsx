@@ -14,11 +14,11 @@ const SlideLayer: React.FC<ISlideLayerProps> = ({
 }) => {
   function generateDir(checked: boolean, like: boolean) {
     if (like) {
-      if (checked) return "left";
-      else return "right";
-    } else {
       if (checked) return "right";
       else return "left";
+    } else {
+      if (checked) return "left";
+      else return "right";
     }
   }
   return (
