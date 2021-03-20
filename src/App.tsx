@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSwipeable } from "react-swipeable";
+import { StatusTypes, DirectionTypes } from "./type";
 import Profile from "./Profile";
 import ClickRecord from "./ClickRecord";
 import { BASE_URL, commonHeaders } from "./common";
@@ -30,11 +31,9 @@ function App() {
 
   const handlers = useSwipeable({
     onSwipeStart: (data) => {
-      if (data.dir === "Left") {
-        handleDislike(selectedUser.id)();
-      } else {
-        handleLike(selectedUser.id)();
-      }
+      data.dir === DirectionTypes.LEFT
+        ? handleDislike(selectedUser.id)()
+        : handleLike(selectedUser.id)();
     },
     trackMouse: true,
   });
@@ -52,7 +51,7 @@ function App() {
 
   useEffect(() => {
     setSelectedUser(users[0]);
-  }, [users.length]);
+  }, [users, users.length]);
 
   const handleLike = (id: string) => () => {
     changeSelectedUser(id);
@@ -82,8 +81,7 @@ function App() {
 
   const handleSelectRecordCard = (type: string) => () => {
     setClickRecord(true);
-    if (type === "like") setLike(true);
-    else setLike(false);
+    setLike(type === StatusTypes.LIKE);
   };
 
   const handleBackToProfile = () => setClickRecord(false);

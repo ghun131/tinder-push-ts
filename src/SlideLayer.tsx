@@ -13,13 +13,8 @@ const SlideLayer: React.FC<ISlideLayerProps> = ({
   like,
 }) => {
   function generateDir(checked: boolean, like: boolean) {
-    if (like) {
-      if (checked) return "right";
-      else return "left";
-    } else {
-      if (checked) return "left";
-      else return "right";
-    }
+    //Read about XOR binary operator: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR
+    return (Number(checked) ^ Number(like)) ? "left" : "right"
   }
   return (
     <Slide

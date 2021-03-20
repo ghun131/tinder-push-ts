@@ -4,6 +4,7 @@ import Favorite from "@material-ui/icons/Favorite";
 import Close from "@material-ui/icons/Close";
 import ThumbUp from "@material-ui/icons/ThumbUp";
 import ThumbDown from "@material-ui/icons/ThumbDown";
+import { StatusTypes } from "./type";
 import { BASE_URL, commonHeaders } from "./common";
 import SlideLayer from "./SlideLayer";
 import "./Profile.css";
@@ -56,13 +57,13 @@ function Profile({
     <SlideLayer like={likeUser} checked={checked}>
       <div className="ProfileAction__container__top">
         <IconButton
-          onClick={handleSelectRecordCard("dislike")}
+          onClick={handleSelectRecordCard(StatusTypes.DISLIKE)}
           className="ProfileAction__button"
         >
           <ThumbDown />
         </IconButton>
         <IconButton
-          onClick={handleSelectRecordCard("like")}
+          onClick={handleSelectRecordCard(StatusTypes.LIKE)}
           className="ProfileAction__button"
         >
           <ThumbUp />

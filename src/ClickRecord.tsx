@@ -5,12 +5,12 @@ import Favorite from "@material-ui/icons/Favorite";
 import Close from "@material-ui/icons/Close";
 import ThumbUp from "@material-ui/icons/ThumbUp";
 import ThumbDown from "@material-ui/icons/ThumbDown";
-import SlideLayer from "./SlideLayer";
+import { StatusTypes } from "./type";
 
 interface IClickRecordProps {
   checked: boolean;
   handleSelectRecordCard: (
-    id: string
+    type: StatusTypes
   ) => () => void;
   handleBackToProfile: () => void;
   isLike: boolean;
@@ -30,13 +30,13 @@ function ClickRecord({
     <div className="ClickRecord__container"> 
       <div className="ProfileAction__container__top">
         <IconButton
-          onClick={handleSelectRecordCard("dislike")}
+          onClick={handleSelectRecordCard(StatusTypes.DISLIKE)}
           className="ProfileAction__button"
         >
           <ThumbDown />
         </IconButton>
         <IconButton
-          onClick={handleSelectRecordCard("like")}
+          onClick={handleSelectRecordCard(StatusTypes.LIKE)}
           className="ProfileAction__button"
         >
           <ThumbUp />
